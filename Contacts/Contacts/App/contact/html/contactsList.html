@@ -1,0 +1,46 @@
+﻿
+<div class="panel panel-primary">
+    
+    <div class="panel-heading">My Contacts</div>
+    <div class="panel-body">
+        <div class="col-md-6">
+            <a class="btn btn-primary" href="#/mycontacts/newcontact"><i class="glyphicon glyphicon-file"></i> New</a>
+        </div>
+        <div class="col-xs-10 col-lg-6 col-md-6">
+            <div class="input-group">
+                <input type="text" id="searchText" class="form-control pull-right" placeholder="Search for..." ng-model="search_txt">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="text-muted glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div><!-- /input-group -->
+       </div><!-- /.col-lg-6 -->
+        <div class="table table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>First Name</td>
+                        <td>Email</td>
+                        <td>Mobile</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contact in contacts | filter:search_txt ">
+                        <td>{{contact.lastName}}</td>
+                        <td>{{contact.firstName}}</td>
+                        <td>{{contact.email}}</td>
+                        <td>{{contact.mobile}}</td>
+                        <td>
+                            <a class="btn btn-primary" href="#/mycontacts/{{contact.id}}">
+                            <i class="glyphicon glyphicon-edit"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
