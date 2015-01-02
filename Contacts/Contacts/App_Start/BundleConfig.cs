@@ -26,6 +26,7 @@ namespace Contacts
                       "~/Scripts/Angular1.3.5/angular-route.js",
                       "~/Scripts/Angular1.3.5/angular-resource.js",
                       "~/Scripts/Angular1.3.5/angular-ui-bootstrap.js",
+
                       "~/App/contactApp.js",
                       "~/App/clientRoute.js",
                       "~/App/DataService/contactDataService.js",
